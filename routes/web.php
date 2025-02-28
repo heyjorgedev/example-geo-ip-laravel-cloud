@@ -8,6 +8,7 @@ Route::get('/', function(Request $request) {
 
     return [
         'country' => $country,
+        'ip' => $request->ip(),
         'repository' => 'https://github.com/heyjorgedev/example-geo-ip-laravel-cloud',
     ];
 });
