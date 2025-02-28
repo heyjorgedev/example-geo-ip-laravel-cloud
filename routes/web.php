@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(Request $request) {
-    $country = $request->header('CF-IPCountry');
+    $country = $request->header('CF-IPCountry', 'XX');
 
     return [
         'country' => $country,
